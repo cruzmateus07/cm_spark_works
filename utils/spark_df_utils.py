@@ -1,7 +1,14 @@
+from pyspark.sql import SparkSession, DataFrame
 import pyspark.sql.functions as func
 
 
 class SparkDfUtils():
+    """
+        A class with often used DataFrame manipulation functions
+    """
+
+    def __init__(self, spark: SparkSession):
+        self._spark = spark
 
     def get_last_update_ts(self, df: DataFrame, ts_field: str):
         """
