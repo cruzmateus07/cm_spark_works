@@ -1,4 +1,5 @@
 from pyspark.sql import SparkSession, DataFrame
+from pyspark.sql.functions import col
 import pyspark.sql.functions as func
 
 
